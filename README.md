@@ -4,3 +4,7 @@
 <br />
 <h3> All my solutions with the generated HackerRank code </h3>
 </p>
+
+.h2{
+  align:center;
+}
