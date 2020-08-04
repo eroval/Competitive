@@ -5,7 +5,9 @@
 <h2 align="center"> All my solutions with the generated HackerRank code </h2>
 <h3>Includes(as of yet):</h3>
 - 30 Days of Code
+<br />
 - Problem Solving Challenges
+<br />
 - Project Euler
 <br />
 <h3>Plan to add:</h3>
