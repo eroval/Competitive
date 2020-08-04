@@ -11,5 +11,5 @@
 - Project Euler
 <br />
 <h3>Plan to add:</h3>
-- Future Contests
+- Future Contests like Hack The Interview and such
 </p>
