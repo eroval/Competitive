@@ -1,2 +1,2 @@
-# HackerRank
-All my HackerRank Challenges and Contests
+# All of my coding challenges and contests
+![HackerRank](https://github.com/eroval/HackerRank/blob/master/imgs/hackerrank2.png)
