@@ -3,4 +3,11 @@
 <br />
 <br />
 <h2 align="center"> All my solutions with the generated HackerRank code </h2>
+<h3>Includes(as of yet):</h3>
+- 30 Days of Code
+- Problem Solving Challenges
+- Project Euler
+<br />
+<h3>Plan to add:</h3>
+- Future Contests
 </p>
