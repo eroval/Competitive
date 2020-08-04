@@ -1,1 +1,1 @@
-![HackerRank](https://github.com/eroval/HackerRank/blob/master/imgs/hackerrank2.png)
+<img align="center" src="https://github.com/eroval/HackerRank/blob/master/imgs/hackerrank2.png">
