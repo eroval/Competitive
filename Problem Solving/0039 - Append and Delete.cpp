@@ -49,6 +49,7 @@ string appendAndDelete(string s, string t, int k) {
 
 //WAY II
 // Sometimes it's also easier to do the opposite(which I didn't think initially of, so I spent so much time on this exercise at the beggining)
+//Function to find the length of a string
 int Length(std::string a){
     int i=0;
     while(a[i]!='\0'){
@@ -59,10 +60,13 @@ int Length(std::string a){
 
 // Complete the appendAndDelete function below.
 string appendAndDelete(string s, string t, int k) {
+    //Length of the strings
     int sz1=Length(s);
     int sz2=Length(t);
+
     int equal=0;
 
+    //Check which string to look at for equality(smaller is chosen)
     if(s.size()>t.size()){
         for(int i=0; i<s.size(); i++){
             if(s[i]==t[i]){
@@ -84,14 +88,27 @@ string appendAndDelete(string s, string t, int k) {
         }
     }
 
+    //Find the total number of characters to be filled in
     int Total = sz1-equal+sz2-equal;
+
+    /* 1. If the Total number of characters is greater than the available then is 
+    not possible.
+    2. If the amount of characters minus the total number isn't divisible by two then it is obviously not possible (example aba, aba, 1 (total=0, but k=1 => cannot be 
+        filled in)). 
+    3. However 2* works ONLY WHEN ALSO k-Total-equal*2<0 because if we take
+    for example aba aba 7. Then that should be possible because we can delete aba and
+    then continue deleteion for one more time and then add 3 more characters.
+    another example abcd, abcdefg, 7 (abcdefgh? OR abcd -> * -> abc? 
+    (we have deleted 'abcd' and then had only 3 more characters to add - 'abd' )). 
+    It simply isn't possible.
+    */
+
 
     if(Total>k||(abs(k-Total)%2!=0&&k-Total-equal*2<0)){
         return "No";
     }
     else return "Yes";
 }
-
 
 
 int main()
