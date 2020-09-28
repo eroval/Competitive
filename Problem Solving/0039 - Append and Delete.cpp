@@ -10,6 +10,8 @@ int Length(std::string a){
     return i;
 }
 
+
+//WAY I
 // Complete the appendAndDelete function below.
 string appendAndDelete(string s, string t, int k) {
     int sz1=Length(s);
@@ -44,6 +46,53 @@ string appendAndDelete(string s, string t, int k) {
     }
     else return "No";
 }
+
+//WAY II
+// Sometimes it's also easier to do the opposite(which I didn't think initially of, so I spent so much time on this exercise at the beggining)
+int Length(std::string a){
+    int i=0;
+    while(a[i]!='\0'){
+        i++;
+    };
+    return i;
+}
+
+// Complete the appendAndDelete function below.
+string appendAndDelete(string s, string t, int k) {
+    int sz1=Length(s);
+    int sz2=Length(t);
+    int equal=0;
+
+    if(s.size()>t.size()){
+        for(int i=0; i<s.size(); i++){
+            if(s[i]==t[i]){
+                equal++;
+            }
+            else{
+                break;
+            }
+        }
+    }
+    else {
+        for(int i=0; i<t.size(); i++){
+            if(s[i]==t[i]){
+                equal++;
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+    int Total = sz1-equal+sz2-equal;
+
+    if(Total>k||(abs(k-Total)%2!=0&&k-Total-equal*2<0)){
+        return "No";
+    }
+    else return "Yes";
+}
+
+
 
 int main()
 {
