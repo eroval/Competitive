@@ -94,7 +94,7 @@ string appendAndDelete(string s, string t, int k) {
     /* 1. If the Total number of characters is greater than the available then is 
     not possible.
     2. If the amount of characters minus the total number isn't divisible by two then it is obviously not possible (example aba, aba, 1 (total=0, but k=1 => cannot be 
-        filled in)). 
+    filled in)). 
     3. However 2* works ONLY WHEN ALSO k-Total-equal*2<0 because if we take
     for example aba aba 7. Then that should be possible because we can delete aba and
     then continue deleteion for one more time and then add 3 more characters.
