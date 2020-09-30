@@ -2,6 +2,12 @@
 /*
     My way of understanding:
     Find the maximum subset of the elements of the array which's summation is not divisible by k
+    translates to
+    - find all distinct elements of the given array(generate a set)
+    - find all combinations
+    - find the sum for all combinations (can't really be optimized further for finding only sum divisible by k)
+    - find the greatest sum from all the found summations which aren't divisible by k
+    - count the elements of that summation and return them
 */
 
 #include <bits/stdc++.h>
@@ -25,6 +31,8 @@ int nonDivisibleSubset(int k, vector<int> s) {
     std::vector<int> set;
     set.push_back(s[0]);
     set.push_back(1);
+
+    //generate a distinct set
     for(int i=1; i<s.size(); i++){
         bool flag=true;
         for(int j=0; j<set.size(); j+=2){
@@ -39,7 +47,7 @@ int nonDivisibleSubset(int k, vector<int> s) {
         }
     }
     
-
+    //create the array which will have all the combinations of the given elements
     int szx = pow(set.size()/2,2) - 1;
     int szy = set.size()/2;
     int**arr = new int * [szx];
@@ -48,7 +56,7 @@ int nonDivisibleSubset(int k, vector<int> s) {
         arr[i] = new int[szy+1]{};
     }
 
-
+    //find all combinations and save their summation
     for(int i=1; i<=szx; i++){
         int tmp=i;
         int j=0;
@@ -66,6 +74,7 @@ int nonDivisibleSubset(int k, vector<int> s) {
 
 
 /*
+//prints
     for(int i=0; i<szx; i++){
         for(int j=0; j<szy+1; j++){
             std::cout<<arr[i][j]<<" ";
@@ -80,19 +89,19 @@ int nonDivisibleSubset(int k, vector<int> s) {
 
 */
 
-    int Sum=0;
-    int cnt;
+    int Sum=0; //find the greatest Sum not divisible by k
+    int cnt; //count all elements which make up the sum
     for(int i=0; i<szx; i++){
         if(arr[i][szy]%k!=0&&arr[i][szy]>Sum){
             cnt=0;
             Sum=arr[i][szy];
             for(int j=0; j<=szy; j++){
-                std::cout<<arr[i][j]<<" ";
+                // std::cout<<arr[i][j]<<" ";
                 if(arr[i][j]==1){
                     cnt++;
                 }
             }
-            std::cout<<"\n";
+            // std::cout<<"\n";
         }
     }
 
