@@ -2,7 +2,7 @@
 /*
     My way of understanding:
     Find the maximum subset of the elements of the array which's summation is not divisible by k
-    translates to
+    ~ translates to:
     - find all distinct elements of the given array(generate a set)
     - find all combinations
     - find the sum for all combinations (can't really be optimized further for finding only sum divisible by k)
