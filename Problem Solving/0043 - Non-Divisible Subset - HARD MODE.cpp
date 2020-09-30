@@ -1,4 +1,4 @@
-//WRONG UNDERSTANDING OF THE PROGRAM BUT SOLVED AN EVEN MORE AMAZING QUESTION
+//WRONG UNDERSTANDING OF THE QUESTION BUT SOLVED AN EVEN MORE AMAZING ONE!
 /*
     My way of understanding:
     Find the maximum subset of the elements of the array which's summation is not divisible by k
