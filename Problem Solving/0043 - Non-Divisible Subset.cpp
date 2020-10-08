@@ -15,7 +15,6 @@ vector<string> split(const string &);
  *  2. INTEGER_ARRAY s
  */
 
- vector<vector<int>> globarr;
 
 int nonDivisibleSubset(int k, vector<int> s) {
     vector<int> arr(k);
