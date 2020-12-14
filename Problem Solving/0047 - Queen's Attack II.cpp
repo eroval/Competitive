@@ -7,6 +7,7 @@ vector<string> split_string(string);
 //Could be optimized heavily BUT I already started with this approach and didn't really want to start over.
 //If for some reason you are seeing this and are wondering how to solve it, I'd advise the use of an array
 //or a just a list of integers evaluating the minimum distance between the obstacles on the go
+//That way you can avoid so many unnecessary checks like mine.
 int queensAttack(int n, int k, int r_q, int c_q, vector<vector<int>> obstacles) {
     //2D array with coordinates for each element
     // arr[0] - horizontal bigger
