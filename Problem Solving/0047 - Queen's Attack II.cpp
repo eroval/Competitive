@@ -4,7 +4,19 @@ using namespace std;
 
 vector<string> split_string(string);
 
+//Could be optimized heavily BUT I already started with this approach and didn't really want to start over.
+//If for some reason you are seeing this and are wondering how to solve it, I'd advise the use of an array
+//or a just a list of integers evaluating the minimum distance between the obstacles on the go
 int queensAttack(int n, int k, int r_q, int c_q, vector<vector<int>> obstacles) {
+    //2D array with coordinates for each element
+    // arr[0] - horizontal bigger
+    // arr[1] - horizontal smaller
+    // arr[2] - vertical bigger
+    // arr[3] - vertical smaller
+    // arr[4] - diagonal horizontal+ bigger
+    // arr[5] - diagonal horizontal+ smaller
+    // arr[6] - diagonal horizontal- bigger
+    // arr[7] - diagonal horizontal- smaller 
     int arr[8][2];
     for(int i=0; i<8; i++){
         arr[i][0]=0;
