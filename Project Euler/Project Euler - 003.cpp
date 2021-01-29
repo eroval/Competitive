@@ -35,7 +35,7 @@ int main(){
             n/=2;
             l=2;
         }
-            for(unsigned long long i=3; i*i<=n; i++){
+            for(unsigned long long i=3; i<=sqrt(n); i++){
                 while(n%i==0){
                     n/=i;
                 }
@@ -48,3 +48,6 @@ int main(){
     }
     return 0;
 }
+
+
+
